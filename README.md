@@ -1,3 +1,3 @@
-# 154. Getting Data (GET Request) & Transforming Response Data
+# 155. Loading Data When a Component Mounts
 
-Pelajari bagaimana cara mendapatkan data dari database firebase
+Kita akan mempelajari bagaimana cara mendapatkan data dari database firebase ketika halaman dibuka

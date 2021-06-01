@@ -1,24 +1,7 @@
-# vue_basic_12_sending_http_requests
+# 151. Sending a POST Request to Store Data
 
-## Project setup
-```
-npm install
-```
+## Daftar Firebase
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Aktifkan Realtime Database
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Gunakan URL Database

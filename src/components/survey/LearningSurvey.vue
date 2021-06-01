@@ -29,6 +29,7 @@
         <p
           v-if="invalidInput"
         >One or more input fields are invalid. Please check your provided data.</p>
+        <p v-if="error"> {{error}}</p>
         <div>
           <base-button>Submit</base-button>
         </div>
@@ -44,6 +45,7 @@ export default {
       enteredName: '',
       chosenRating: null,
       invalidInput: false,
+      error:null,
     };
   },
   // Tidak butuh emit survey-submit lagi
@@ -60,16 +62,28 @@ export default {
       //   userName: this.enteredName,
       //   rating: this.chosenRating,
       // });
-// Tambahkan URL realtime database firebase
+      this.error=null;
+      //Hapus .json untuk test error
       fetch('https://vue-basic-12-http-default-rtdb.firebaseio.com/surveys.json',{
         method:'POST',
         headers:{
           'Content-Type':'application/json'
         },
-        body:JSON.stringify({
+        // hapus JSON.stringify untuk test error
+        body:JSON.stringify({ 
           name:this.enteredName,
           rating:this.chosenRating,
         })
+      }).then(response=>{
+        if(response.ok){
+          return true;
+        }else{
+          //Jika status respon bukan 200 atau 201
+          throw new Error('Coult not save data!');
+        }
+      }).catch(error=>{
+        console.log(error);
+        this.error="Something went wrong: "+error.message;
       });
 
       this.enteredName = '';

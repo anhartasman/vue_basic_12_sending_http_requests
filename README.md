@@ -1,3 +1,3 @@
-# 155. Loading Data When a Component Mounts
+# 156. Showing a "Loading..." Message
 
-Kita akan mempelajari bagaimana cara mendapatkan data dari database firebase ketika halaman dibuka
+Kita akan mempelajari bagaimana menampilkan loading ketika menunggu data dari server
